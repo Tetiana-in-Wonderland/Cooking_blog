@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import os
 import dj_database_url
 from pathlib import Path
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.blog',
 ]
 
 MIDDLEWARE = [
@@ -73,12 +75,12 @@ WSGI_APPLICATION = 'cookingblog.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-DATABASES = {"default": dj_database_url.parse(get_env_variable("DATABASE_URL"))}
-# Allow using a password from a k8s secret
-DATABASE_PASSWORD = get_env_variable("DATABASE_PASSWORD", False)
-if DATABASE_PASSWORD:
-    DATABASES["default"]["PASSWORD"] = DATABASE_PASSWORD
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "mydatabase",
+    }
+}
 
 
 # Password validation
@@ -117,7 +119,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = '/media/'

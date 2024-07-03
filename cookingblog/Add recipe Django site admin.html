@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr" data-theme="auto"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Add recipe | Django site admin</title>
+<link rel="stylesheet" href="Add%20recipe%20Django%20site%20admin_fichiers/base.css">
+
+  <link rel="stylesheet" href="Add%20recipe%20Django%20site%20admin_fichiers/dark_mode.css">
+  <script src="Add%20recipe%20Django%20site%20admin_fichiers/theme.js" defer="defer"></script>
+
+
+  <link rel="stylesheet" href="Add%20recipe%20Django%20site%20admin_fichiers/nav_sidebar.css">
+  <script src="Add%20recipe%20Django%20site%20admin_fichiers/nav_sidebar.js" defer="defer"></script>
+
+<link rel="stylesheet" href="Add%20recipe%20Django%20site%20admin_fichiers/forms.css">
+
+
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/Sans%20titre.es"></script>
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/jquery.js"></script>
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/jquery.init.js"></script>
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/core.js"></script>
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/RelatedObjectLookups.js"></script>
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/actions.js"></script>
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/urlify.js"></script>
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/prepopulate.js"></script>
+<script src="Add%20recipe%20Django%20site%20admin_fichiers/xregexp.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="Add%20recipe%20Django%20site%20admin_fichiers/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-blog model-recipe change-form" data-admin-utc-offset="0">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="http://localhost:8000/admin/">Django administration</a></h1>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="http://localhost:8000/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="http://localhost:8000/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="TdskohKCmEi7Lz9qETEr5sUKAO5BgAbr9PXSfBPeq79XX5N8g4TTurSzXGBLUFDJ">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
+  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
+  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto"></use>
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon"></use>
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun"></use>
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="http://localhost:8000/admin/">Home</a>
+› <a href="http://localhost:8000/admin/blog/">Blog</a>
+› <a href="http://localhost:8000/admin/blog/recipe/">Recipes</a>
+› Add recipe
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main shifted" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar" aria-expanded="true">
+  <input type="search" id="nav-filter" placeholder="Start typing to filter…" aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="http://localhost:8000/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tbody><tr class="model-group">
+            
+              <th scope="row"><a href="http://localhost:8000/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="http://localhost:8000/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="http://localhost:8000/admin/auth/user/">Users</a></th>
+            
+
+            
+              <td><a href="http://localhost:8000/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+    <div class="app-blog module current-app">
+      <table>
+        <caption>
+          <a href="http://localhost:8000/admin/blog/" class="section" title="Models in the Blog application">Blog</a>
+        </caption>
+        
+          <tbody><tr class="model-recipe current-model">
+            
+              <th scope="row"><a href="http://localhost:8000/admin/blog/recipe/" aria-current="page">Recipes</a></th>
+            
+
+            
+              <td><a href="http://localhost:8000/admin/blog/recipe/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </tbody></table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          <h1>Add recipe</h1>
+          
+          <div id="content-main">
+
+
+
+<form enctype="multipart/form-data" method="post" id="recipe_form" novalidate=""><input type="hidden" name="csrfmiddlewaretoken" value="TdskohKCmEi7Lz9qETEr5sUKAO5BgAbr9PXSfBPeq79XX5N8g4TTurSzXGBLUFDJ">
+<div>
+
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-title">
+            
+            
+                <div>
+                    
+                        <div class="flex-container">
+                            
+                                <label class="required" for="id_title">Title:</label>
+                                
+                                    <input type="text" name="title" class="vTextField" maxlength="200" required="" id="id_title" value="25–Minute braised cucumbers with minced beef (German Schmorgurken)">
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+            
+        </div>
+    
+        <div class="form-row field-image">
+            
+            
+                <div>
+                    
+                        <div class="flex-container">
+                            
+                                <label class="required" for="id_image">Image:</label>
+                                
+                                    <input type="file" name="image" accept="image/*" required="" id="id_image">
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+            
+        </div>
+    
+        <div class="form-row field-ingredients">
+            
+            
+                <div>
+                    
+                        <div class="flex-container">
+                            
+                                <label class="required" for="id_ingredients">Ingredients:</label>
+                                
+                                    <textarea name="ingredients" cols="40" rows="10" class="vLargeTextField" required="" id="id_ingredients">600 g pickling cucumbers
+1 onion
+160 g basmati rice
+1 tbsp sunflower oil
+300 g ground beef
+250 ml beef stock
+20 dill
+150 g whipped cream
+1 tbsp grainy mustard
+1 tsp sugar</textarea>
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+            
+        </div>
+    
+        <div class="form-row field-utensils">
+            
+            
+                <div>
+                    
+                        <div class="flex-container">
+                            
+                                <label class="required" for="id_utensils">Utensils:</label>
+                                
+                                    <textarea name="utensils" cols="40" rows="10" class="vLargeTextField" required="" id="id_utensils">1 peeler, knife, cutting board, rice cooker (optional), 1 frying pan (large)</textarea>
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+            
+        </div>
+    
+        <div class="form-row field-nutrutionperserving">
+            
+            
+                <div>
+                    
+                        <div class="flex-container">
+                            
+                                <label class="required" for="id_nutrutionperserving">Nutrutionperserving:</label>
+                                
+                                    <textarea name="nutrutionperserving" cols="40" rows="10" class="vLargeTextField" required="" id="id_nutrutionperserving">Cal - 1056
+Fat - 61 g
+Protein - 39 g
+Carb - 88 g</textarea>
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+            
+        </div>
+    
+        <div class="form-row field-preparationsteps">
+            
+            
+                <div>
+                    
+                        <div class="flex-container">
+                            
+                                <label class="required" for="id_preparationsteps">Preparationsteps:</label>
+                                
+                                    <textarea name="preparationsteps" cols="40" rows="10" class="vLargeTextField" required="" id="id_preparationsteps">Step
+ 1/4
+Wash and peel the cucumber, halve lengthwise and remove the seeds, cut 
+the cucumber into half moons. Peel and dice the onion. Prepare the rice 
+according to the packet instructions.
+
+Step 2/4
+Heat the oil in a large frying pan. Add the mince and onion and fry over
+ a medium-high heat until crumbly and browned, approx. 6-8 mins. Season 
+with salt and pepper and remove from the pan. Stir-fry the cucumbers for
+ approx. 3 mins., then add the mince again.
+
+Step 3/4
+Add the vegetable stock and bring everything to the boil, then simmer 
+for approx. 5-6 mins. Meanwhile, roughly chop the dill.
+
+Step 4/4
+Add the whipping cream, mustard, sugar and dill and simmer for a further
+ 1 min. Serve with rice!
+Enjoy your meal!</textarea>
+                                
+                            
+                        </div>
+                    
+                </div>
+            
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+
+<input type="submit" value="Save" class="default" name="_save">
+
+<input type="submit" value="Save and add another" name="_addanother">
+<input type="submit" value="Save and continue editing" name="_continue">
+
+
+
+</div>
+
+
+
+    <script id="django-admin-form-add-constants" src="Add%20recipe%20Django%20site%20admin_fichiers/change_form.js" data-model-name="recipe" async="">
+    </script>
+
+
+
+
+<script id="django-admin-prepopulated-fields-constants" src="Add%20recipe%20Django%20site%20admin_fichiers/prepopulate_init.js" data-prepopulated-fields="[]">
+</script>
+
+
+</div>
+</form></div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"></path></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"></path></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"></path><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"></path></symbol>
+</svg>
+<!-- END SVGs -->
+
+
+</body></html>
