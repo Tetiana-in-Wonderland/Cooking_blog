@@ -9,16 +9,26 @@ Make sure you have [docker](https://docs.docker.com/engine/install/) installed o
 Clone the project locally & run docker :
 
 ```
-git clone git@gitlab.liip.ch:apprentice-and-interns/exercises/cooking-blog/base.git cooking-blog
+git clone https://github.com/Tetiana-in-Wonderland/Cooking_blog.git cooking-blog
 cd cooking-blog
+```
+
+### Optional
+Run docker
+```
 docker compose up
 ```
 
-Try to run the project in your browser at :
 
-http://localhost:8000/
+## Run the project (no docker)
+* In a terminal, go to the project folder
+```
+cd [...]/cooking-blog
+```
+* Run django
+```./manage.py runserver```
+* Open your browser at `localhost:8000`
 
-You should see the django page "The install worked successfully!"
 
 ## Create the "blog" application
 
